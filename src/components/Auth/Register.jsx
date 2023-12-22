@@ -6,6 +6,7 @@ import {
   FormLabel,
   Heading,
   Input,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
@@ -64,7 +65,9 @@ const Register = () => {
       marginTop={["200px", "100px"]}
     >
       <VStack h={"full"} justifyContent="center" spacing={"16"}>
-        <Heading children={"Create an account"} />
+        <Text fontSize={"xx-large"} fontWeight={700}>
+          Create an account
+        </Text>
         <form style={{ width: "100%" }} onSubmit={submitHandler}>
           <Box
             my={"4"}

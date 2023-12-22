@@ -5,6 +5,7 @@ import {
   FormLabel,
   Heading,
   Input,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
@@ -25,7 +26,9 @@ const Login = () => {
   return (
     <Container height={"95vh"}>
       <VStack h={"full"} justifyContent="center" spacing={"16"}>
-        <Heading children="Sign in" />
+        <Text fontSize={"xx-large"} fontWeight={700}>
+          Sign in
+        </Text>
         <form style={{ width: "100%" }} onSubmit={submitHandler}>
           <Box marginY={4}>
             <FormLabel htmlFor="email" children="Email address" />
