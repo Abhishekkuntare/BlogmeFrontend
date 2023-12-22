@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.letter1 {
+  color: #ff8066;
+  font-family: 'Nothing You Could Do';
+  font-weight: 600;
+}
+.letter2 {
+    color: #3cbea9;
+    font-family: 'Nothing You Could Do';
+  font-weight: 600;
+}
+.letter3 {
+  font-family: 'Nothing You Could Do';
+  font-weight: 600;
+  color: #2c73d2;
+}
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+@media  screen and (max-width:500px) {
+  .letter1,.letter2,.letter3{
+    font-size: 28px;
+  }
+}
