@@ -11,16 +11,16 @@ const Sidebar = () => {
       padding={16}
       boxShadow={"-2px 0 10px rgba(107,70,193,0.5)"}
     >
-      <Link to={`/admin/courses`}>
+      <Link to={`/admin/blogs`}>
         <Button
           fontSize={"larger"}
           variant="ghost"
           colorScheme={
-            location.pathname === "/admin/courses" ? "purple" : "black"
+            location.pathname === "/admin/blogs" ? "purple" : "black"
           }
         >
           <RiEyeFill style={{ marign: "4px" }} />
-          Courses
+          Blogs
         </Button>
       </Link>
       <Link to={`/admin/users`}>
@@ -35,7 +35,7 @@ const Sidebar = () => {
           Users
         </Button>
       </Link>
-      <Link to={`/admin/createcourse`}>
+      <Link to={`/admin/createblog`}>
         <Button
           fontSize={"larger"}
           variant="ghost"
@@ -44,7 +44,7 @@ const Sidebar = () => {
           }
         >
           <RiAddCircleFill style={{ marign: "4px" }} />
-          Create Course
+          Create Blog
         </Button>
       </Link>
     </VStack>

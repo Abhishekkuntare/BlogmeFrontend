@@ -95,7 +95,7 @@ const HomeCom2 = () => {
               cursor="pointer"
               width={300}
             >
-              <Link to={"/contact"}> Book a Demo</Link>
+              <Link to={"/login"}> Book a Demo</Link>
               <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fillRule="evenodd"

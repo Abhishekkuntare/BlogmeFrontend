@@ -6,16 +6,18 @@ import {
   DrawerOverlay,
   Heading,
   HStack,
+  Image,
   Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
-import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from "react-icons/ri";
+import { RiDashboardFill, RiLogoutBoxLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/actions/user";
+import logoo from "../../assets/logo.png";
 
 const Header = ({ isAuthenticated, user }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -29,23 +31,23 @@ const Header = ({ isAuthenticated, user }) => {
   return (
     <>
       <ColorModeSwitcher />
-      <Button
+
+      <Image
         zIndex={"overlay"}
-        onClick={onOpen}
-        colorScheme={"purple"}
-        width={100}
-        height={12}
         position={"fixed"}
         top="6"
         left="6"
-      >
-        <Text>BM</Text>
-      </Button>
+        onClick={onOpen}
+        width={90}
+        src={logoo}
+        cursor={"pointer"}
+        _hover={{ width: 120, transition: "all 0.5s ease-in-out" }}
+      />
       <Drawer placement="left" isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay
           backdropFilter={"blur(10px)"}
           backgroundImage={
-            "https://cdn.dribbble.com/userupload/7657007/file/original-115826eb84acbe14140752e017eba16e.jpg?resize=1200x851"
+            "https://cdn.dribbble.com/users/1432628/screenshots/14969519/media/d668a643e79272cc7f296924e905e680.png?resize=1000x750&vertical=center"
           }
         />
         <DrawerContent backgroundColor={"transparent"}>
@@ -76,7 +78,7 @@ const Header = ({ isAuthenticated, user }) => {
                   Home
                 </Button>
               </Link>
-              <Link to={"/courses"} onClick={onClose}>
+              <Link to={"/blogs"} onClick={onClose}>
                 <Button backgroundColor={"purple.500"} variant={"ghost"}>
                   Browse All Blogs
                 </Button>
@@ -110,7 +112,7 @@ const Header = ({ isAuthenticated, user }) => {
                         </Button>
                       </HStack>
                       {user && user.role === "admin" && (
-                        <Link to={"/admin/users"} onClick={onClose}>
+                        <Link to={"/admin/blogs"} onClick={onClose}>
                           <Button
                             colorScheme={"purple.500"}
                             backgroundColor={"purple"}

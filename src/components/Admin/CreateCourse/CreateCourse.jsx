@@ -79,7 +79,12 @@ const CreateCourse = () => {
     >
       <Container py={16}>
         <form onSubmit={submitHandler}>
-          <Text fontSize={"xx-large"} fontWeight={700}>
+          <Text
+            textAlign={"center"}
+            mb={10}
+            fontSize={"xxx-large"}
+            fontWeight={700}
+          >
             Create blogs
           </Text>
 

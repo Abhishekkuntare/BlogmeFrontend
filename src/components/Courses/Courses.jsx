@@ -1,6 +1,9 @@
 import {
   Badge,
+  Box,
+  Button,
   Container,
+  Flex,
   Heading,
   HStack,
   Image,
@@ -10,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { chakra } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const Course = ({ title, imageSrc, creator, description }) => {
+const Course = ({ id, title, imageSrc, creator, description }) => {
   return (
     <VStack className="course" alignItems={["center", "flex-start"]}>
       <Image src={imageSrc} boxSize="60" objectFit={"contain"} />
@@ -36,6 +40,9 @@ const Course = ({ title, imageSrc, creator, description }) => {
           children={creator}
         />
       </HStack>
+      <Link to={`/blog/${id}`}>
+        <Button colorScheme="purple">Read</Button>
+      </Link>
     </VStack>
   );
 };

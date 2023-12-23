@@ -60,7 +60,12 @@ const Users = () => {
       templateColumns={["1fr", "5fr 1fr"]}
     >
       <Box p={["0", "16"]} overflowX="auto">
-        <Text fontSize={"xx-large"} fontWeight={700}>
+        <Text
+          mb={10}
+          textAlign={"center"}
+          fontSize={"xxx-large"}
+          fontWeight={700}
+        >
           All Users
         </Text>
         <TableContainer w={["100vw", "full"]}>

@@ -70,7 +70,12 @@ const AdminCourses = () => {
       templateColumns={["1fr", "5fr 1fr"]}
     >
       <Box p={["0", "16"]} overflowX="auto">
-        <Text fontSize={"xx-large"} fontWeight={700}>
+        <Text
+          textAlign={"center"}
+          fontSize={"xxx-large"}
+          mb={10}
+          fontWeight={700}
+        >
           All Blogs
         </Text>
         <TableContainer w={["100vw", "full"]}>

@@ -66,10 +66,10 @@ export default function HomeCom1() {
               bgGradient: "linear(to-r, purple.200,yellow.200)",
             }}
           >
-            <Link to={"/request"}>Get Started</Link>
+            <Link to={"/login"}>Get Started</Link>
           </Button>
           <Button rounded={"full"} px={6}>
-            <Link to={"/about"}>Learn more</Link>
+            <Link to={"/blogs"}>Learn more</Link>
           </Button>
         </Stack>
       </Stack>

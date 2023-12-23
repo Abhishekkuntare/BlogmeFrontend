@@ -23,6 +23,7 @@ import { ProtectedRoute } from "protected-route-react";
 import HomeLoader from "./components/Layout/HomeLoader";
 import TopDown from "./assets/TopDown";
 import Dashboard from "./components/Admin/Dashboard/Dashboard";
+import BlogsDeatails from "./components/Courses/BlogsDeatails";
 
 function App() {
   window.addEventListener("contextmenu", (e) => {
@@ -58,7 +59,8 @@ function App() {
           <Header isAuthenticated={isAuthenticated} user={user} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<Courses />} />
+            <Route path="/blogs" element={<Courses />} />
+            <Route path="/blog/:id" element={<BlogsDeatails />} />
 
             <Route
               path="/course/:id"
@@ -154,7 +156,7 @@ function App() {
             />
 
             <Route
-              path="/admin/createcourse"
+              path="/admin/createblog"
               element={
                 <ProtectedRoute
                   adminRoute={true}
@@ -167,7 +169,7 @@ function App() {
             />
 
             <Route
-              path="/admin/courses"
+              path="/admin/blogs"
               element={
                 <ProtectedRoute
                   adminRoute={true}

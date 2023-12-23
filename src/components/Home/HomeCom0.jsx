@@ -26,7 +26,7 @@ export default function HomeCom0() {
             color: "gray.100",
           }}
         >
-          Best Reading
+          Unlocking Boundless Ideas:
           <Text
             display={{
               base: "block",
@@ -37,9 +37,9 @@ export default function HomeCom0() {
             bgGradient="linear(to-l, red.400,orange.200)"
             fontWeight="extrabold"
           >
-            {""} Blogs and
+            Where Innovation Meets Insight in Our
           </Text>{" "}
-          Websites
+          Blog WebApp Journey. Explore, Engage, Evolve
         </chakra.h1>
         <Text color={"gray.500"} maxW={"3xl"}>
           Goodreads is a premier platform for book lovers, offering personalized
@@ -58,7 +58,7 @@ export default function HomeCom0() {
           src="https://cdn.dribbble.com/users/688456/screenshots/6987081/media/02fa39c89719db95d7650a37f9b3665f.mp4"
         />
         <Stack spacing={6} direction={"row"}>
-          <Link to="/courses">
+          <Link to="/blogs">
             <Button
               width={[300, 400]}
               bgGradient="linear(to-l, red.400,purple.200)"

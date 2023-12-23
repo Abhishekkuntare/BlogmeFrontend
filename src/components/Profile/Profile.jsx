@@ -2,6 +2,7 @@ import {
   Avatar,
   Button,
   Container,
+  Heading,
   HStack,
   Input,
   Modal,
@@ -29,9 +30,6 @@ const Profile = ({ user }) => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   const { loading, error, message } = useSelector((state) => state.course);
-  const removeFromPlayListHandler = async (id) => {
-    dispatch(loadUser());
-  };
 
   const changeImageSubmitHandler = async (e, image) => {
     e.preventDefault();
@@ -54,7 +52,7 @@ const Profile = ({ user }) => {
 
   return (
     <Container minH={"95h"} maxW="container.lg" py={"8"}>
-      <Text fontSize={"xx-large"} fontWeight={700}>
+      <Text mb={10} fontWeight={700} fontSize={"xx-large"}>
         Profile
       </Text>
       <Stack
@@ -84,6 +82,18 @@ const Profile = ({ user }) => {
             <Text children="Created At" fontWeight={"bold"} />
             <Text children={user.createdAt.split("T")[0]} />
           </HStack>
+          {user.role !== "admin" && (
+            <HStack>
+              <Text children="Subscription" fontWeight={"bold"} />
+              {user.subscription && user.subscription.status === "active" ? (
+                <Button color={"purple.500"}>Cancel Subsription</Button>
+              ) : (
+                <Link to="/subscribe">
+                  <Button colorScheme={"purple"}>Subscribe</Button>
+                </Link>
+              )}
+            </HStack>
+          )}
 
           <Stack direction={["column", "row"]} alignItems="center">
             <Link to="/updateprofile">
@@ -95,6 +105,8 @@ const Profile = ({ user }) => {
           </Stack>
         </VStack>
       </Stack>
+
+      <Heading children="PlayList" size={"md"} my="8" />
 
       <ChangePhotoBox
         changeImageSubmitHandler={changeImageSubmitHandler}
